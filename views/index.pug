@@ -1,0 +1,47 @@
+html
+  head
+    link(href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="css/mediaquery.css")
+    title blog
+  body
+  nav
+    header
+      .slide-show-container
+        .main-arrow.left-arrow(onclick="plusSlides(-1)")
+          span.arrow.arrow-left
+        .main-arrow.right-arrow(onclick="plusSlides(1)") 
+          span.arrow.arrow-right 
+
+        .image-container
+          img(src="../images/oswald1.jpeg" height="200" width="200")
+        .image-container  
+          img(src="../images/oswald2.jpeg")
+        .image-container  
+          img(src="../images/oswald3.jpeg")
+        .image-container  
+          img(src="../images/oswald4.jpeg")
+        .image-container  
+          img(src="../images/oswald5.JPG")
+        #dotsContainer
+
+  .container
+    if messages && messages.success
+      .parent-element
+        .success
+          button.close-message#flash-message.btn x
+          p.flash-message #{messages.success}
+    h1.header Welcome to my life.
+    form.form-container(method="POST" action=`/post`)
+      .form-second-container
+        label(for="author") Author
+        input.input.author(type="text" name="author" required="true")
+        label(for="subject") Subject
+        input.input.subject(type="text" name="subject" required="true")
+        label(for="post") Post
+        textarea.input.post(type="text" name="post" required="true" rows="4") 
+      input.input.submit(type="submit" value="Submit")
+    h4.posts-header My thoughts.
+    #post.posts
+
+  script(src="js/index.js")

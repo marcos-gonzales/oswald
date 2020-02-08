@@ -1,0 +1,8 @@
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  .form-second-container  {
+    font-size: 25px;
+  }
+  .form-container {
+    font-size: 25px;
+  }
+}
